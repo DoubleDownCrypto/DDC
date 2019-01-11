@@ -39,7 +39,7 @@ class Login extends Component {
           </label>
           <label id="login_password">
             Password:
-              <input type='text' placeholder='Password' name='password' onChange={this.handleChange.bind(this)}/>
+              <input type='text' type='password' placeholder='Password' name='password' onChange={this.handleChange.bind(this)}/>
           </label>
           <input type='submit' value='Submit'/>
         </form>
