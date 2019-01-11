@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Login from './Login/index';
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class App extends Component {
   render() {
     return(
       <div>
-        hello this is App
+        <Login/>
       </div>
     )
   }
