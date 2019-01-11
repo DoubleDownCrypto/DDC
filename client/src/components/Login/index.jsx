@@ -6,7 +6,8 @@ class Login extends Component {
 
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      loggedIn: false
     };
 
     this.handleSubmit.bind(this);
@@ -15,6 +16,9 @@ class Login extends Component {
   handleSubmit (e) {
     console.log('this is handle Submit')
     e.preventDefault();
+    this.setState({
+      loggedIn: !this.state.loggedIn
+    })
   }
 
   handleChange (e) {
