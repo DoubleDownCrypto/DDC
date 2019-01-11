@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './login.scss';
 
 class Login extends Component {
   constructor() {
@@ -6,8 +7,7 @@ class Login extends Component {
 
     this.state = {
       username: '',
-      password: '',
-      loggedIn: false
+      password: ''
     };
 
     this.handleSubmit.bind(this);
@@ -16,9 +16,6 @@ class Login extends Component {
   handleSubmit (e) {
     console.log('this is handle Submit')
     e.preventDefault();
-    this.setState({
-      loggedIn: !this.state.loggedIn
-    })
   }
 
   handleChange (e) {
@@ -31,7 +28,10 @@ class Login extends Component {
   render() {
     return(
       <div id="login_container">
+      <div id="login_header">
       <h1>Log In to Your Account</h1>
+      </div>
+      <div id="login_info_container">
         <form id="login_form" onSubmit={this.handleSubmit}>
           <label id="login_username">
             Username:
@@ -43,6 +43,14 @@ class Login extends Component {
           </label>
           <input type='submit' value='Submit'/>
         </form>
+        <div id="login_type">
+          <ul>
+            <li>Google</li>
+            <li>Facebook</li>
+            <li>Github</li>
+          </ul>
+        </div>
+        </div>
       </div>
     )
   }
