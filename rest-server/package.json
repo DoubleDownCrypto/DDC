@@ -7,7 +7,8 @@
     "rest-server": "entry.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon bin/entry.js"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +27,12 @@
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-latest": "^6.24.1",
     "babel-register": "^6.26.0"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   }
 }

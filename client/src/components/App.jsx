@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return(
       <div>
-        Hello this is App
+        hello this is App
       </div>
     )
   }
