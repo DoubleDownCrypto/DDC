@@ -28,7 +28,8 @@ module.exports = {
   entry: ['babel-polyfill', path.resolve('./src/index') ],
   output: {
     path: path.resolve('../client/public/dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   mode: 'development',
   watch: true,
@@ -76,8 +77,11 @@ module.exports = {
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: "url-loader?limit=1000000&mimetype=image/svg+xml"
-      }
+      },
     ]
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   resolve: {
     extensions: [ '.js', '.jsx' ]
