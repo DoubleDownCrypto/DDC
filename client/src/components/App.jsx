@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Login from './Login/index';
-import {Link, Route, Switch} from 'react-router-dom';
+import Home from './Home/index';
+
+import {Link, Route, Switch, hashHistory} from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
@@ -13,17 +15,10 @@ class App extends Component {
   render() {
     return(
       <div>
-        <div>
-          <ul>
-            <li><Link to='./home'>Home</Link></li>
-            <li><Link to='./login'>Login</Link></li>
-          </ul>
-        </div>
-
         <Switch>
+          <Route exact path='/' component={Home}/>
           <Route path='/login' component={Login}/>
         </Switch>
-
       </div>
     )
 }
